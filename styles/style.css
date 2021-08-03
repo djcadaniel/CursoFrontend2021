@@ -17,7 +17,7 @@ body {
 .header {
     display: flex;
     justify-content: space-between;
-    /* align-items:center ; */
+    align-items: center;
     width: 100%;
     min-width: 320px;
     height: 80px;
@@ -26,9 +26,8 @@ body {
 }
 
 .header__img {
-    display: flex;
-    width: 220px;
-    height: 80px;
+    align-items: center;
+    height: 60px;
 }
 
 .header__menu {
@@ -60,6 +59,15 @@ body {
     display: block;
 }
 
+/*----main---*/
+.main {
+    width: 100%;
+    min-width: 320px;
+    margin: 0 auto;
+    padding: 2% 0;
+    text-align: center;
+}
+
 .main__title {
     color: white;
     font-size: 25px;
@@ -84,36 +92,42 @@ body {
     border: 2px solid #a5e6c5;
 }
 
+/*---CAROUSEL----*/
 .carousel {
-    padding: 30px;
-    overflow: scroll;
-    position: relative;
+    width: 100%;
+    min-width: 320px;
+    margin: 0 auto;
+    /* background-color: blue; */
+
 }
 
 .carousel__container {
-    white-space: nowrap;
-    margin: 70px 0px;
-    padding-bottom: 10px;
+    width: 100%;
+    display: flex;
+    overflow: scroll;
+    padding: 2% 0 4% 0;
+    transition: 450ms all;
 }
 
 .carousel__item {
     position: relative;
-    display: inline-block;
-    width: 200px;
-    height: 250px;
-    line-height: 250px;
-    border-radius: 20px;
+    height: 300px;
+    min-width: 300px;
+    border-radius: 15px;
     overflow: hidden;
-    margin-right: 10px;
+    margin-right: 15px;
     cursor: pointer;
     transition: 450ms all;
     transform-origin: center left;
-    /* background-color: palevioletred; */
-    background-color: blue;
+    background-color: red;
 }
 
-.carousel__item:hover~.carousel__item {
-    transform: translate3d(100px, 0, 0);
+.carousel__details {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 .carousel__container:hover .carousel__item {
@@ -121,8 +135,12 @@ body {
 }
 
 .carousel__container:hover .carousel__item:hover {
-    transform: scale(1.5);
+    transform: scale(1.1);
     opacity: 1;
+}
+
+.carousel__item:hover~.carousel__item {
+    transform: translateX(50px)
 }
 
 /*IMAGENES DEL CARRUSEL*/
@@ -154,7 +172,7 @@ body {
 }
 
 .carousel__details:hover {
-    opacity: 1;
+    opacity: .8;
 }
 
 .carousel__details--images img {
@@ -162,5 +180,9 @@ body {
 }
 
 /*---LOGIN----*/
+.login {
+    width: 100%;
+    min-width: 320px;
+}
 
 /*-----FIN LOGIN ----*/
